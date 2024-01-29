@@ -19,7 +19,7 @@ public class tebak {
             boolean finish = false;
 
             while (!finish) {
-                System.out.println(rangeMin + " " + rangeMax);
+                // System.out.println(rangeMin + " " + rangeMax);
 
                 if (rangeMax - rangeMin <= range[0]) {
                     finish = true;
