@@ -18,6 +18,7 @@ public class tebak {
             int rangeMax = range[1];
             boolean finish = false;
 
+            int i = 0;
             while (!finish) {
                 // System.out.println(rangeMin + " " + rangeMax);
 
@@ -31,6 +32,8 @@ public class tebak {
                     randomGuessNumber = rangeMin;
                 } else {
                     randomGuessNumber = (int) (Math.random() * (rangeMax - rangeMin - 1) + rangeMin);
+                    // rumus tengah
+                    // randomGuessNumber = (rangeMax + rangeMin) / 2;
                 }
 
                 System.out.print("Apakah angka mu lebih besar dari " + randomGuessNumber + "? (Y/T): ");
@@ -45,9 +48,12 @@ public class tebak {
                     main(args);
                     break;
                 }
+
+                i++;
             }
 
             if (finish) {
+                System.out.println("\nJumlah Perulangan : " + i);
                 System.out.println("Angka anda adalah " + rangeMax + "!\n");
             }
         }
